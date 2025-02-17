@@ -5,7 +5,8 @@ public abstract class Piece{
     protected int moves;
     protected int x;
     protected int y;
-    public boolean canMove(int x, int y){
+    protected int team = -1;
+    public boolean canMove(int x, int y, int enemyIndex){
         return false;
     }
 
@@ -18,5 +19,14 @@ public abstract class Piece{
     public void setPos(int x, int y){
         this.x = x;
         this.y = y;
+
     };
+
+    public int getTeam(){
+        return this.team;
+    }
+
+    public int getMoves(){
+        return this.moves;
+    }
 }
